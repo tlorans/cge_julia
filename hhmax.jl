@@ -32,7 +32,7 @@ end
 
 @NLconstraints model begin
   EQ_X[i = goods], X[i] == alpha[i] * sum(pf[h] * FF[h] for h in factors) / px[i] # household demand function
-  EQ_UU, UU == prod(X[i] * alpha[i] for i in goods) # utility function
+  EQ_UU, UU == prod(X[i] ^ alpha[i] for i in goods) # utility function
 end
 
 # Model Solver
